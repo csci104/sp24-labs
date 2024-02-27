@@ -110,11 +110,11 @@ bool Skirmish(Warrior ***protectors, Warrior ***invaders, int n, int m, int skir
     bool protectorLost = false;
     if (invader->weapon == protector->weapon)
     {
-      if (invader->power < protector->power)
+      if (invader->power > protector->power)
       {
         protectorLost = true;
       }
-      else if (protector->power < invader->power)
+      else if (protector->power > invader->power)
       {
         delete invader;
         invaders[skirmishLine][k] = nullptr;
@@ -215,5 +215,5 @@ int main(int argc, char **argv)
   }
 
   DeallocateWarriors(protectors, n, m);
-  DeallocateWarriors(invaders, n, m);
+  DeallocateWarriors(invaders, m, n);
 }

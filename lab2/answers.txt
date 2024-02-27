@@ -1,1 +1,30 @@
-Answers go here!
+line number where the error was.
+A short explanation of the nature of the error (one or two sentences).
+A short explanation of what you did to fix the error.
+
+Problem 1:
+    - Error on line 249
+    - Code was allocating invaders[invaderRow][invaderRol] instead of
+    invaders[invaderRow][invaderCol]
+    - Changed InvaderRow index to InvaderCol to allocate correctly
+
+Problem 2:
+    - Error on line 27 
+    - Next if statement was not running
+    - Removed the semicolon
+
+Problem 3:
+    - Error on line 62
+    - ColIdx was not being incremented, so stuck in infinite loop
+    - added ++ColIdx into for loop condition
+
+Problem 4: 
+    - Error on line 218
+    - Deallocation function call didn't match Allocation call
+    - Changed DeallocateWarriors call to DeallocateWarriors(invaders, m, n) to match
+    Allocation call
+
+Problem 5: 
+    - Error on line 113 and 117
+    - Logic for determining the winners was opposite
+    - Changed the < to > so that the logic beneath matched

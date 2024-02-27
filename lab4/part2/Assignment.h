@@ -13,7 +13,8 @@ public:
 	void setTotalPoints(int totalPoints);
 	bool isComplete();
 	void complete();
-	std::string getType();
+	//create abstract base class
+	virtual std::string getType() = 0;
 
 private:
 	std::string mName;

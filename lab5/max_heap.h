@@ -37,8 +37,40 @@ void MaxHeap<T>::pop() {
         throw std::out_of_range("heap is empty");
     }
 
-    // TO BE COMPLETETED
-    
+    //swap the best with last leaf node
+    std::swap(data[0], data[data.size() - 1]);
+
+    //delete last leaf node which stores "best" item rn
+    data.pop_back();
+
+    //keep trickling down the top item until it's in right location
+    std::size_t index = 0;
+
+    while (true) {
+        std::size_t c1 = 2*index + 1; //left child
+        std::size_t c2 = 2*index + 2; //right child
+        std::size_t largest = index; 
+
+        //check if left child exist + greater than current
+        if ((c1 < data.size()) && data[c1] > data[largest]) {
+            largest = c1;
+        }
+
+        //check if right child exist + greater than current
+        if ((c2 < data.size()) && (data[c2] > data[largest])) {
+            largest = c2;
+        }
+
+        //largest isnt the current item, swap
+        if (largest != index) {
+            std::swap(data[index], data[largest]);
+            index = largest;
+        }
+        else {
+            break;
+        }
+        
+    }
 }
 
 template <typename T>

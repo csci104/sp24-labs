@@ -171,4 +171,3 @@ bool Sudoku::solveHelper(int row, int col)
 // number to put in the block, try solving the next one in
 // sequence. Continue until you have solved the puzzle or
 // cannot find a number that will fit in the block.
-

@@ -16,9 +16,7 @@ private:
     bool isValid(int row, int col);
     bool solveHelper(int row, int col);
     int board[9][9];
-
-    bool allSquaresComplete()
-
+    
     // add extra helper functions here
 };
 
